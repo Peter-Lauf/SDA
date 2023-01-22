@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Management</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>User Management</h1>
+    </header>
+    <main>
+        <section>
+            <div class="create-user-div">
+                <div>
+                    <h4>User Details</h4>
+                </div>
+                <form action="javascript:createUser()" method="post">
+                    <div>
+                        <label>First Name</label>
+                        <input 
+                        id="firstName" 
+                        name="firstName" 
+                        type="text" 
+                        placeholder="Enter your first name" 
+                        required/>
+                    </div>
+                    <div>
+                        <label>Last Name</label>
+                        <input 
+                        id="lastName" 
+                        name="lastName" 
+                        type="text" 
+                        placeholder="Enter your last name" 
+                        required/>
+                    </div>
+                    <div>
+                        <label>Email address</label>
+                        <input 
+                        id="emailAddress" 
+                        name="emailAddress"
+                        type="text" 
+                        placeholder="Your@email-address.com" 
+                        required/>
+                    </div>
+                    <div>
+                        <label>User type</label>
+                        <select 
+                        id="userType" 
+                        name="userType"  
+                        required>
+                        <option>Student</option>
+                        <option>Teacher</option>
+                        <option>Admin</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button>Create User</button>
+                    </div>
+                </form>
+                <br/>
+            </div>
+            <div>
+                <!-- search product area! -->
+            </div>
+        </section>
+        <section class="display-section">
+            <table>
+                <thead>
+                    <td>ID</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Email Address</td>
+                    <td>User Type</td>
+                    <td>Logged In</td>
+                </thead>
+                <tbody id="userDisplayArea">
+                </tbody>
+            </table>
+            <!-- display area! -->
+        </section>
+    </main>
+</body>
+<script src="index.js"></script>
+</html>

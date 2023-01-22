@@ -10,11 +10,11 @@ let user = {
 
 const listOfUsers = [
     user,
-    user,
-    user,
-    user,
-    user,
-    user,
+    // user,
+    // user,
+    // user,
+    // user,
+    // user,
 ];
 
 function createUser() {

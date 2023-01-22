@@ -152,3 +152,133 @@ function performcalculation(operator) {
 }
 
 console.log(calculate(10, 20, 'multiply'))
+
+const anotherPerformcalculation = () => {
+    console.log("hello!")
+}
+
+const yetAnotherOne = function () {
+    console.log("hello!")
+}
+
+
+
+let customer = {
+    name: "Peter",
+    age: 65,
+    location: "Tallinn",
+    height: 190,
+    balance: 140.99,
+    introduce: function () {return "Hello my name is Peter";},
+}
+
+console.log(customer)
+
+customer.showSomething = function (value1, value2) {
+    let total = value1 + value2;
+    // more stuff here
+    // more stuff here
+    // more stuff here
+    return "Something something " + total;
+}
+
+console.log(customer.name)
+console.log(customer.age)
+console.log(customer.location)
+console.log(customer.height)
+console.log(customer.balance)
+
+let anotherCustomer = {...customer};
+
+let yetAnotherCustomer = {
+    ...customer,
+    name: 'John',
+    age: 67,
+    height: 12,
+    balance: 4,
+}
+
+litOfPets = [
+    "cat",
+    "dog",
+    "rabbit",
+    "tiger",
+    "rat",
+]
+
+console.log(litOfPets[2])
+console.log(litOfPets[0])
+console.log(litOfPets[1])
+console.log(litOfPets[3])
+
+let rat = litOfPets[4];
+let cat = litOfPets[0];
+let rabbit = litOfPets[2];
+
+for (i = 0; i < litOfPets.length; i++) {
+    console.log("Pet at position: " + i + " is " + litOfPets[i])
+}
+
+for (let counter = 1; counter <= 50; counter++){
+    console.log("counter: " + counter)
+}
+
+
+function doStuff() {
+    doStuff();
+}
+
+let listOfCustomers = [
+    customer,
+    {...customer, name: "John"},
+    {...customer, name: "Peter"},
+    {...customer, name: "Teve"},
+    {...customer, name: "Mary"},
+    {...customer, name: "Zino"},
+    {...customer, name: "Siim"},
+    {...customer, name: "Reg"},
+]
+
+console.log(listOfCustomers);
+
+for (let i = 0; i < listOfCustomers.length; i++) {
+    let currentCustomer = listOfCustomers[i];
+
+    if (currentCustomer.name === "Mary") {
+        console.log(currentCustomer)
+        break;
+    }
+}
+
+let users = [];
+
+const addUser = () => {
+    const fullName = document.querySelector("#fullName").value;
+    const id = Math.floor(Math.random() * 1000);
+
+    users.push({
+        fullName: fullName,
+        id: id
+    })
+    displayUsers(users);
+}
+
+const displayUsers = (users) => {
+    let listOfUsersHTML = '';
+
+    users.forEach((currentUser) => {
+        listOfUsersHTML += "<li>" + currentUser.fullName + "</li>"
+    })
+
+    document.querySelector("#userList").innerHTML = listOfUsersHTML;
+}
+
+
+const removeUser = () => {
+    const fullName = document.querySelector("#fullName").value;
+
+    users = users.filter((currentUser) => currentUser.fullName != fullName);
+
+    displayUsers(users)
+
+}
